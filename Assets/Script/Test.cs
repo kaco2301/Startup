@@ -10,11 +10,16 @@ public class Test : MonoBehaviour
 
     private void Start()
     {
+        SearchStore();
+    }
+
+    public void SearchStore()
+    {
         List<Dictionary<string, object>> data_Dialog = CSVReader.Read(readFileName);
 
-        for (int i = 0; i < data_Dialog.Count; i++) 
+        for (int i = 0; i < data_Dialog.Count; i++)
         {
-            Debug.Log(data_Dialog[i][readHeaderName].ToString()); 
+            Debug.Log(data_Dialog[i][readHeaderName].ToString());
         }
     }
 }
